@@ -1,0 +1,94 @@
+.page-footer{
+    margin: 20px;
+    color: white;
+    bottom: 0;
+    position: relative;
+}
+
+.logomarca img{
+    width: 100%;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    background-color: #45B264;
+    padding: 2% 5%;
+    justify-content: space-between;
+    border-radius: 20px;
+ }
+
+ .links{
+    text-align: right;
+    height: 50%;
+ }
+
+ .links-gerais{
+     display: flex;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+
+ 
+
+ .links-gerais ul li{
+     list-style: none;
+ }
+
+ .links-gerais a{
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.3vw;
+ }
+
+ .links-gerais h5{
+     margin-left: 35px;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: white;
+     font-size: 2vw;
+ }
+
+ .links-contatos{
+     margin-top: 30px;
+ }
+
+ .fa{
+    color: white;
+    font-size: 3.5vw; 
+    margin-left: 20px;
+ }
+
+ .fa:hover{
+     transform: scale(1.1);
+     translate: 0.3s;
+     color: #2f7041;
+ }
+
+ .footer-copyright{
+    background-color: #E66C1F;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+ }
+ .titulo-copyright{
+     font-weight: bold;
+     font-size: 1.5vw;
+ }
+
+ .subtitulo-copyright{
+    font-size: 1.5vw;
+ }
+
+ @media screen and (max-width:850px) {
+    .links-gerais a{
+        font-size: 1.5vw;
+    }
+    .logomarca{
+        display: none;
+    }
+    .links-gerais h5{
+        font-size: 2.5vw;
+    }
+}

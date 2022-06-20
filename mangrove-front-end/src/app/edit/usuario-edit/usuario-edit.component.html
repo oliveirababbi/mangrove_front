@@ -1,0 +1,62 @@
+<div class="container-fluid justify-content-center">
+
+    <h1 class="text-center mt-5"><B>EDITAR USUARIO</B></h1>
+
+</div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-6 margem-there">
+            <div class= "form-group">
+                <label for="titulo">Nome</label>
+                <input type="text" [(ngModel)]="usuarioModel.nomeUsuario" class="form-control shadow" id="titulo" placeholder="Nome completo">
+            </div>
+            <div class="form-group" >
+                <label for="emailUsuario">Email</label>
+                <input [(ngModel)]="usuarioModel.emailUsuario" class="form-control form-custom" type="text" name="emailUsuario" id="emailUsuario" placeholder="example@email.com" >
+            </div>
+            <div class="form-group">
+                <label for="titulo">Foto</label>
+                <input type="text" [(ngModel)]="usuarioModel.fotoUsuario" class="form-control shadow" id="titulo" placeholder="imgur.com/example">
+            </div>
+            <div class="form-group">
+                <label for="passwordUsuario">Senha</label>
+                <input (input)='confirmaSenha($event)' class="form-control form-custom" type="password" name="passwordUsuario" id="passwordUsuario" placeholder="****************" > 
+            </div>
+            
+        
+        </div>
+        <div class="col-md-6 margem-here">
+
+            <div>
+                <div class="form-group">
+                    <label for="confirmaSenha">Confirmar Senha</label>
+                    <input [(ngModel)]="usuarioModel.passwordUsuario" class="form-control form-custom" type="password" name="confirmaSenha" id="confirmaSenha" placeholder="****************" > 
+                </div>
+                <div class="form-group">
+                    <label for="tipUsuario">Tipo de usuário</label>
+                    <select (change)="tipoDoUsuario($event)" class="form-control form-custom" name="tipUsuario" id="tipUsuario">
+                        <option value=""selected disabled> Selecione um tipo de usuário</option>
+                        <option value="normal">Cliente</option>
+                        <option value="adm">Vendedor</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="texto">Descrição do Usuario</label>
+                    <textarea type="text" [(ngModel)]="usuarioModel.descricaoUsuario" class="form-control shadow"  name="texto" id="Descrição" placeholder="Digite o texto entre 5-1000 caracteres" rows="3"></textarea>
+                </div>
+            </div>    
+        </div>    
+    </div>
+</div>
+
+    <div class="container-fluid justify-content-center">
+        <div class="row justify-content-center">
+            <button class="botao-cor-especial botao-tamanho btn btn-success mt-5 rounded-pill" (click)="atualizar()">Atualizar</button>
+        </div>
+    </div>
+    <br>
+    <br>
+
+

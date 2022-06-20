@@ -1,0 +1,19 @@
+.botao-cor-especial {
+    background-color: #E66C1F;
+    color: white;
+    border-color:  #E66C1F;
+}
+.fonte-titulo {
+    font-family: 'Roboto', sans-serif;
+}
+.botao-tamanho {
+    width: 400px;
+
+}
+.form-control{
+    border-radius: 20px 20px 20px 20px;
+    width: 400px;
+    color: #808080;
+    background-color:#FEFFDE;
+}
+

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+a{
+    cursor: pointer;
+}
+
+.navbar-custom{
+    background-color: #f3dcaf;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.menu-icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+@media screen and (max-width:991px) {
+    .menu-icons{
+        flex-direction: column;
+    }
+    .menu-icons li{
+        padding: 0 !important;
+    }
+}
+
+.dropdown-custom{
+    background-color: #f3dcaf;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dropdown-item-custom{
+    color: rgba(0,0,0,.5);
+}
+
+.dropdown-item-custom:hover{
+    background-color: #f3dcaf;
+    font-weight: 600;
+    color:black;
+}
+
+.fa{
+    font-size: 27px;
+    color: rgba(0,0,0,.5);
+}
+
+.fa:hover{
+    color: black;
+}

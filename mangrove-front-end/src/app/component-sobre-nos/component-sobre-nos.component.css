@@ -1,0 +1,60 @@
+.quem-somos h1 {
+    font-size: 90px;
+    font: #000000;
+}
+ 
+.card {
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: center;
+  }
+ 
+.card-body {
+    background: #FEFFDE;
+}
+ 
+.icon-github{
+    margin: 0 15px;
+    width: 100px;
+    height: 100px;
+    color: #E66C1F;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4;
+    font-size: 30px;
+}
+ 
+.icon-linkedin{
+    margin: 0 15px;
+    width: 100px;
+    height: 100px;
+    color: #E66C1F;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4;
+    font-size: 30px;
+}
+ 
+.icon-envelope{
+    margin: 0 15px;
+    width: 100px;
+    height: 100px;
+    color: #E66C1F;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4;
+    font-size: 30px;
+}
+        
+.fa-github {
+    color: #E66C1F;
+}
+ 
+.fa-linkedin {
+    color: #E66C1F;
+}
+    
+.fa-envelope {
+    color: #E66C1F;
+}

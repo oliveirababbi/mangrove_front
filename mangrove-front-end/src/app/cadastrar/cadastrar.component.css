@@ -1,0 +1,60 @@
+.form-custom-geral{
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 200px;
+    min-width: 70vw;
+}
+
+.bg-mangue{
+    background: url(https://imgur.com/L9U6IKq.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+}
+
+
+.form-custom{
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: thin solid #cccccc;
+}
+
+.cadastro a{
+    color: #ADAC33;
+    font-weight: bold;
+}
+
+
+.button-cadastrar {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ADAC33;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.button-cadastrar:hover {
+    color: #F3DCAF;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.button-cancelar {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #c4c4c4;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.button-cancelar:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+}

@@ -1,0 +1,51 @@
+.form-custom-geral{
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 200px;
+    min-width: 60vw;
+}
+
+.bg-mangue{
+    background: url(https://imgur.com/L9U6IKq.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+}
+
+
+.form-custom{
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: thin solid #cccccc;
+}
+
+
+.button-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cadastro a{
+    color: #ADAC33;
+    font-weight: bold;
+}
+
+.button-login button{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ADAC33;
+    border-radius: 20px;
+    padding: 10px 70px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.button-login:hover button{
+    color: #F3DCAF;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
