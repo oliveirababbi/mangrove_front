@@ -28,7 +28,7 @@
                             <li *ngFor="let categoria of listaCategorias">
                                 <a class="dropdown-item dropdown-item-custom" [routerLink]="['/buscar-categoria', categoria.id]">{{categoria.nomeCategoria}}</a> 
                             </li>   
-                            <li><hr class="dropdown-divider"></li>
+                            <li *ngIf="administrador()" ><hr class="dropdown-divider"></li>
                             <li>
                                 <a *ngIf="administrador()" class="dropdown-item dropdown-item-custom" routerLink="/categoria">Editar/Adicionar categorias</a>
                             </li>
@@ -37,7 +37,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/buscar-produtos">Nossa loja</a>
+                        <a class="nav-link" routerLink="/buscar-produtos">Nossos produtos</a>
                     </li>
 
                     <li class="nav-item">
@@ -62,10 +62,10 @@
                             <div class="dropdown-menu dropdown-custom" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item dropdown-item-custom"  routerLink="/entrar" *ngIf="deslogado()">Entrar</a>
                               <a class="dropdown-item dropdown-item-custom" routerLink="/cadastrar" *ngIf="deslogado()">Cadastrar</a>
-                              <a class="dropdown-item dropdown-item-custom"  routerLink="/usuario-edit" *ngIf="logado()">Editar perfil</a>
+                              <a class="dropdown-item dropdown-item-custom" [routerLink]="['/usuario-edit', id]" *ngIf="logado()">Editar perfil</a>                            
                               <a class="dropdown-item dropdown-item-custom" (click)="sair()" *ngIf="logado()">Sair</a>
                             </div>
-                        </li>
+                        </li>      
                     </div>    
             </ul>
         </div>

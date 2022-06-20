@@ -32,6 +32,10 @@ export class AuthService {
     return this.http.post<UsuariosModel>('https://mangroveprojeto.herokuapp.com/usuarios/cadastrar', usuarioModel)
   }
 
+  atualizar(usuarioModel:UsuariosModel): Observable<UsuariosModel>{
+    return this.http.put<UsuariosModel>('https://mangroveprojeto.herokuapp.com/usuarios/cadastrar', usuarioModel)
+  }
+
   edit(usuarioModel:UsuariosModel): Observable<UsuariosModel>{
     return this.http.post<UsuariosModel>('https://mangroveprojeto.herokuapp.com/usuarios/edit' , usuarioModel)
   }

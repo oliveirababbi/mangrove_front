@@ -4,7 +4,7 @@
 }
 
 .botao-cor-compra{
-    background-color: #45B264;
+    background-color: #ADAC33;
     color: white;
 }
 
@@ -24,4 +24,8 @@
 
 .con-radius{
     border-radius: 20px;
+}
+
+.buttonCarrosel{
+    background-color: #ADAC33;
 }

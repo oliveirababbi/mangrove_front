@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertasComponent } from 'src/app/alertas/alertas.component';
 import { CategoriaModel } from 'src/app/model/CategoriaModel';
 import { ProdutosModel } from 'src/app/model/ProdutosModel';
+import { UsuariosModel } from 'src/app/model/UsuariosModel';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { CategoriasService } from 'src/app/service/categorias.service';
 import { ProdutosService } from 'src/app/service/produtos.service';
@@ -16,9 +17,14 @@ import { environment } from 'src/environments/environment.prod';
 export class ProdutoEditComponent implements OnInit {
 
   produto: ProdutosModel = new ProdutosModel()
+  listaProdutos: ProdutosModel[]
+
   categoria: CategoriaModel= new CategoriaModel()
   listCategorias: CategoriaModel[]
   idCategoria: number
+
+
+
 
   constructor(
     private router: Router,
@@ -59,16 +65,34 @@ export class ProdutoEditComponent implements OnInit {
 
   }
 
+  findAllProduto(){
+    this.produtosService.getAllProdutos().subscribe((resp: ProdutosModel[])=>{
+      this.listaProdutos=resp
+    })
+  }
+
   atualizar(){
     this.categoria.id=this.idCategoria
     this.produto.categoria=this.categoria
+
+    // this.usuario.id = this.idUsuario
+    // this.produto.usuario = this.usuario
     
     this.produtosService.putProdutos(this.produto).subscribe((resp:ProdutosModel)=>{
       this.produto = resp
       this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/home'])
+      this.findAllProduto()
     })
 }
 
+cadastrarCategoria(){
+  this.categoriasService.postCategorias(this.categoria).subscribe((resp:CategoriaModel)=>{
+    this.categoria=resp
+    this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
+    this.findAllCategorias()
+    this.categoria= new CategoriaModel()      
+  })
+}
 
 }

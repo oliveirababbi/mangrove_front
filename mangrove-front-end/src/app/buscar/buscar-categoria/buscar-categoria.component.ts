@@ -66,17 +66,6 @@ export class BuscarCategoriaComponent implements OnInit {
     })
   }
 
-  findByNomeProduto(){
-
-    if(this.nomeProduto ==''){
-      this.findAllProdutos()
-    } else{
-      this.produtosService.getByNomeProduto(this.nomeProduto).subscribe((resp: ProdutosModel[]) => {
-        this.listaProdutos = resp
-      })
-    }  
-  }
-
   administrador () {
     let ok: boolean = false;
     if (environment.tipoUsuario == 'adm') {

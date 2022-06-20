@@ -8,12 +8,13 @@
 
       <div class="conteudo">
         <h5>{{produto.nomeProduto}}</h5>
-        <p>{{produto.descricaoProduto}}</p>
+        <p>Descrição: {{produto.descricaoProduto}}</p>
+        <p>Categoria: {{produto.categoria.nomeCategoria}}</p>
         <h6 class="conteudo-valor">{{produto.valorProduto | currency: "BRL"}}</h6>
         <p>
           <i class="fa fa-credit-card" aria-hidden="true"></i>Parcelamos em até 3x
         </p>
-        <button class="btn button-adicionar">Adicionar ao carrinho</button>
+        <button class="btn button-adicionar" [routerLink]="['/carrinho-compras', produto.id]">Adicionar ao carrinho</button>
         <button class="btn button-cancelar" [routerLink]="['/buscar-produtos']">Cancelar</button>
     </div>
 

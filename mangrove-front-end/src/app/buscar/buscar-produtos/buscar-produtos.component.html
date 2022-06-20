@@ -29,6 +29,13 @@
     </div>
 
 
+  <div *ngIf="administrador()" class="container">
+    <div class="row justify-content-center mb-3">
+          <button class="btn botao-cadastrar" routerLink="/produto">CADASTRAR NOVO PRODUTO</button>
+    </div>
+  </div>
+
+
 <div class="container">
   <section class="row justify-content-center fontRoboto" >
     <article
@@ -47,13 +54,13 @@
           <p class="card-text text-center">R${{produto.valorProduto.replace(".", ",")}}</p>
           <div class="d-flex flex-column">
             <button
-              href="#"
-              class="btn botao-cor-especial border-r px-4 py-0 m-0 mb-3"
+              class="btn botao-cor-especial border-r px-4 py-0 m-0 mb-3" [routerLink]="['/carrinho-compras', produto.id]"
             >Adicionar ao Carrinho
             </button>
             <button class="btn botao-cor-compra border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
           </div>
           <div *ngIf="administrador()">
+            <hr>
             <button class="btn btn-info mr-2"  [routerLink]="['/produto-edit', produto.id]">Editar</button>
             <button  class="btn btn-danger" [routerLink]="['/produto-delete', produto.id]">Apagar</button>
            </div>

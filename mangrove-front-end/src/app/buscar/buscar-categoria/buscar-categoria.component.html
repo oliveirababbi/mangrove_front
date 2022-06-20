@@ -7,19 +7,6 @@
       </h5>
     </div>
 
-    <div class="col-md-5">
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control border-r text-center"
-          id="nomeProduto"
-          placeholder="Pesquise pelo nome do produto"
-          [(ngModel)]="nomeProduto"
-          (keyup)="findByNomeProduto()"
-        />
-      </div>
-    </div>
-
     <div class="col-md-2">
       <select name="opcaoKey" id="opcaoKey" (change)="opcaoKey($event)" class="border-r p-2">
         <option value=""selected disabled> Ordenar por: </option>
@@ -37,12 +24,13 @@
          <div class="card-body p-3">
              <img src="{{produto.fotoProduto}}" onerror="this.src = 'https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg'" class=" card-posicao-imagem" alt="carangueijo" >
              <h5 class="card-title text-center">{{produto.nomeProduto}}</h5>
-                 <p class="card-text text-center">R$ {{produto.valorProduto}}</p>                  
+                 <p class="card-text text-center">R${{produto.valorProduto.replace(".", ",")}}</p>                  
            <div class="d-flex flex-column">
              <button href="#" class="btn botao-cor-especial  border-r px-4 py-0 m-0 mb-3">Adicionar ao Carrinho</button>
              <button class="btn botao-cor-compra border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
            </div>
            <div *ngIf="administrador()">
+            <hr>
             <button class="btn btn-info mr-2"  [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
             <button  class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
            </div>  

@@ -51,17 +51,25 @@
                       <tr>
                         <th scope="row" class="border-0">
                           <div class="p-2">
-                            <img src="https://peixariaz13.com.br/2020/wp-content/uploads/2015/02/DSC_8497-SCAMP%C2%B4S-OU-LAGOSTIN%C2%B4S.jpg" alt="" width="180" class="img-fluid rounded shadow-sm">
+                            <img src="{{produto.fotoProduto}}" alt="" width="180" class="img-fluid rounded shadow-sm">
                             <div class="ml-3 d-inline-block align-middle">
-                              <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Lagostin</a></h5><span class="textfont-weight-normal font-italic d-block">Categoria: Pescados</span>
+                              <h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle">{{produto.nomeProduto}}</a></h5>
+                              <p class="textfont-weight-normal font-italic d-block">{{produto.categoria.nomeCategoria}}</p>
                             </div>
                           </div>
                         </th>
-                        <td class="align-middle"><div class=”btn”>+</div><strong>3</strong><div class=”btn”>-</div> </td>
-                        <td class="border-0 align-middle"><strong>R$79.00</strong></td>
-                        <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash action"></i></a></td>
+                        <div class="quantity">
+                          <button class="plus-btn" type="button" name="button">
+                            <h5 (click)="mudarQuantiMenos()">-</h5>
+                          </button>
+                          <input type="text" name="name" value="{{quant}}">
+                          <button class="minus-btn" type="button" name="button">
+                            <h5 (click)="mudarQuantiMais()">+</h5>
+                          </button>
+                        </div>
+                          <td class="border-0 align-middle"><strong>{{produto.valorProduto}}</strong></td>
                       </tr>
-                      <tr>
+                      <!-- <tr>
                         <th scope="row">
                           <div class="p-2">
                             <img src="https://blog.sansuy.com.br/wp-content/uploads/2019/08/original-8a98b93f02447120c0f9fe326a467a42-710x473.jpg" alt="" width="180" class="img-fluid rounded shadow-sm">
@@ -87,7 +95,7 @@
                           <td class="border-0 align-middle"><strong>R$79.00</strong></td>
                           <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
                           </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -101,9 +109,9 @@
                 <div class="p-4">
                   <div class="input-group mb-4 border p-2">
                     <input type="text" placeholder="Digite aqui o seu cupom" aria-describedby="button-addon3" class="form-control border-0">
-                    <div class="input-group-append border-0">
+                    <div class="input-group-append border-0 inputConf">
                     </div>
-                    <button id="button-addon3" type="button" class="btn text-white px-4 rounded-pill" style="background-color: #45B264"><b>OK</b></button>
+                    <button type="button" class="btn buttonStyle text-white"><b>OK</b></button>
                   </div>
                 </div>
     

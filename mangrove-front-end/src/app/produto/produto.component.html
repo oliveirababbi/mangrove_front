@@ -1,22 +1,68 @@
-<div class="container-fluid">     
-  
-    <div class="container-fluid bg-light ">
-        <section class="row justify-content-center fontRoboto">
-            <article class="card borda-cor-especial card-largura p-0 m-4 col-12">
-            <img src="" class=" card-posicao-imagem" alt="carangueijo">
-            <div class="card-body">
-                <h5 class="card-title text-center ">Caneca Mangrove</h5>
-                    <p class="card-text text-center">R$: 15,00 unidade</p>
+<div class="container justify-content-center">
+
+  <h1 class="text-center mt-5 fontRoboto">ADICIONAR PRODUTO</h1>
+
+</div>
+
+<div class="container mt-10 fontRoboto">
+  <div class="row justify-content-center">
+      
+      <div class="col-md-5">
+          <div class= "form-group">
+              <label for="titulo">Nome do produto</label>
+              <input type="text" [(ngModel)]="produto.nomeProduto" class="form-control shadow" id="titulo" placeholder="Nome do Produto">
+          </div>
+          <div class="form-group">
+              <label for="texto">Descrição do produto</label>
+              <textarea type="text" [(ngModel)]="produto.descricaoProduto" class="form-control shadow"  name="texto" id="Descrição" placeholder="Digite o texto entre 5-1000 caracteres" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="titulo">Foto do produto</label>
+              <input type="text" [(ngModel)]="produto.fotoProduto" class="form-control shadow" id="titulo" placeholder="Foto do Produto">
+          </div>
+      </div>
+
+      <div class="col-md-5">
+      
+      <div>
+      <div class="form-group">
+          <label for="titulo">Valor do produto</label>
+          <input type="text" [(ngModel)]="produto.valorProduto" class="form-control shadow" id="titulo" placeholder="Valor do Produto">
+      </div>
+      <div class="form-group">
+          <label for="titulo">Estoque do produto</label>
+          <input type="text" [(ngModel)]="produto.estoqueProduto" class="form-control shadow" id="titulo" placeholder="Estoque do Produto">
+        </div>
+        <div class="form-group">
+            <label for="texto">Escolha uma categoria ou <a href="#novaCategoria">adicione nova categoria</a></label>
+            <select class="form-control" name="categoria" id="categoria" [(ngModel)]="idCategoria" (change)="findByIdCategorias()">
+                <option *ngFor="let categoria of listCategorias" value="{{categoria.id}}">{{categoria.nomeCategoria}}</option>
+            </select>
+        </div>
+            <button class="botao-cor-especial botao-tamanho btn btn-success mt-2 rounded-pill" (click)="cadastrar()">cadastrar</button>
+      </div>
+      </div>
+
+
+      </div>
+  </div>
+
+
+
+<div id="novaCategoria" class="container justify-content-center fontRoboto">
+
+  <div class="row justify-content-center">
+      <div class="col-md-12 mb-3 mt-5">
+          <h1 class="text-center fontRoboto">NOVA CATEGORIA</h1>
+      </div>
+
+      <div class="col-md-12 d-flex justify-content-center"> 
+          <div class="form-group">
+              <label for="titulo">Nome</label>
+              <input type="text" [(ngModel)]="categoria.nomeCategoria" class="form-control shadow" id="titulo" placeholder="Nome">
+              <button class="botao-cor-especial botao-tamanho btn btn-success mt-3 rounded-pill" (click)="cadastrarCategoria()">Cadastrar Categoria</button>
               
-              <div class="d-flex flex-column">
-                <button href="#" class="btn botao-cor-especial  border-r px-4 py-0 m-0 mb-3" >Adicionar ao Carrinho</button>
-                <button class="btn botao-cor-compra border-r px-4 py-0 "> Comprar</button>
-              </div>  
-            </div>
-    </article>
-</section>
-</div>
-</div>
-
-
-
+          </div>
+         </div>
+      </div>
+  </div>

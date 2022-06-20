@@ -1,31 +1,18 @@
-
-.border-r{
-    border-radius: 50px 50px 50px 50px;
-}
-
 .botao-cor-especial {
     background-color: #E66C1F;
     color: white;
+    border-color:  #E66C1F;
 }
-
-.botao-cor-compra{
-    background-color: #45B264;
-    color: white;
+.fonte-titulo {
+    font-family: 'Roboto', sans-serif;
 }
+.botao-tamanho {
+    width: 400px;
 
-.borda-cor-especial {
-    border-color: rgb(184, 182, 178);
 }
-
-.card-posicao-imagem {
-    object-fit: cover;
-    height: 200px;
+.form-control{
+    border-radius: 20px 20px 20px 20px;
+    width: 400px;
+    color: #808080;
+    background-color:#FEFFDE;
 }
-.card-largura {
-    max-width: 18rem;
-    border-radius: 10px;
-}
-
-
-
-  

@@ -29,6 +29,7 @@ import { ComponenteRaizesComponent } from './componente-raizes/componente-raizes
 import { ComponentSobreNosComponent } from './component-sobre-nos/component-sobre-nos.component';
 import { CarrinhoComprasComponent } from './carrinho-compras/carrinho-compras.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     ComponenteRaizesComponent,
     ComponentSobreNosComponent,
     CarrinhoComprasComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
