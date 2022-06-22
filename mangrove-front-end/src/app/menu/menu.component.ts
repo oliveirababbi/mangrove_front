@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CategoriaModel } from '../model/CategoriaModel';
+import { ProdutosModel } from '../model/ProdutosModel';
+import { UsuariosModel } from '../model/UsuariosModel';
 import { AuthService } from '../service/auth.service';
 import { CategoriasService } from '../service/categorias.service';
 
@@ -12,28 +14,32 @@ import { CategoriasService } from '../service/categorias.service';
 })
 export class MenuComponent implements OnInit {
 
-  nome = environment.nomeUsuario
-  foto = environment.fotoUsuario
-  id = environment.id
+
+  id: number
+
+  usuario: UsuariosModel = new UsuariosModel()
 
   listaCategorias: CategoriaModel[] 
   categoria: CategoriaModel = new CategoriaModel()
   idCategoria: number
 
+  produto: ProdutosModel = new ProdutosModel()
+
   constructor(
     private router: Router,
     private categoriaService: CategoriasService,
-    private auth: AuthService
+    private auth: AuthService,
 
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     this.findAllCategorias()
-  }
+  }   
 
 
   sair(){
-    this.router.navigate(['/entrar'])
+    this.router.navigate(['/home'])
     environment.tokenUsuario = ''
     environment.nomeUsuario = ''
     environment.fotoUsuario = ''
@@ -52,10 +58,11 @@ export class MenuComponent implements OnInit {
     })
   }
 
-  logado () {
+  logado() {
     let ok: boolean = false;
     if (environment.tokenUsuario != '') {
       ok = true
+      this.id = environment.id
     }
     return ok
   }
@@ -68,10 +75,18 @@ export class MenuComponent implements OnInit {
     return ok
   }
 
-  administrador () {
+  findByIdUsuario(){
+    this.auth.getByIdUser(this.id).subscribe((resp: UsuariosModel)=>{
+      this.usuario = resp
+    })
+  }
+
+  administrador() {
     let ok: boolean = false;
-    if (environment.tipoUsuario == 'adm') {
-      ok = true
+    if(this.logado()){
+      if (environment.tipoUsuario == 'adm') {
+        ok = true
+      }
     }
     return ok
   }

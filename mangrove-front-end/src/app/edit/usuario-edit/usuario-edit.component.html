@@ -1,13 +1,13 @@
-<div class="container-fluid justify-content-center">
+<div class="container justify-content-center">
 
     <h1 class="text-center mt-5"><B>EDITAR USUARIO</B></h1>
 
 </div>
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
+<div class="container ">
+    <div class="row justify-content-center mt-5 ml-5">
         
-        <div class="col-md-6 margem-there">
+        <div class="col-md-6">
             <div class= "form-group">
                 <label for="titulo">Nome</label>
                 <input type="text" [(ngModel)]="usuarioModel.nomeUsuario" class="form-control shadow" id="titulo" placeholder="Nome completo">
@@ -27,10 +27,10 @@
             
         
         </div>
-        <div class="col-md-6 margem-here">
+        <div class="col-md-6">
 
-            <div>
-                <div class="form-group">
+
+                <div class="form-group ">
                     <label for="confirmaSenha">Confirmar Senha</label>
                     <input [(ngModel)]="usuarioModel.passwordUsuario" class="form-control form-custom" type="password" name="confirmaSenha" id="confirmaSenha" placeholder="****************" > 
                 </div>
@@ -49,10 +49,10 @@
             </div>    
         </div>    
     </div>
-</div>
 
-    <div class="container-fluid justify-content-center">
-        <div class="row justify-content-center">
+
+    <div class="container justify-content-center mb-5">
+        <div class="row justify-content-center  button-hover">
             <button class="botao-cor-especial botao-tamanho btn btn-success mt-5 rounded-pill" (click)="atualizar()">Atualizar</button>
         </div>
     </div>

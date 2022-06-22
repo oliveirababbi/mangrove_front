@@ -1,16 +1,16 @@
 
-.botao-apagar{
-    background-color: #ADAC33;
+.botao-cancelar{
+    background-color: var(--danger-color);
     color: white;
-    border-color:  #ADAC33;
+    border-color:  var(--danger-color);
     text-transform: uppercase; 
     border-radius: 50px ;
     padding: 5px 15px 5px 15px;
 }
-.botao-cancelar{
-    background-color: #E66C1F;
+.botao-apagar{
+    background-color: var(--success-color);
     color: white;
-    border-color:  #E66C1F;
+    border-color:  var(--success-color);
     text-transform: uppercase; 
     border-radius: 50px ;
     padding: 5px 15px 5px 15px;

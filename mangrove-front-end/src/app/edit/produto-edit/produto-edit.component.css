@@ -1,15 +1,18 @@
-.botao-cor-especial {
-    background-color: #E66C1F;
-    color: white;
-    border-color:  #E66C1F;
-}
+
 .fonte-titulo {
     font-family: 'Roboto', sans-serif;
 }
 .botao-tamanho {
+   padding-left: 30px;
+   padding-right: 30px;
+
+}
+
+.botao-tamanho-categoria {
     width: 400px;
 
 }
+
 .form-control{
     border-radius: 20px 20px 20px 20px;
     width: 400px;
@@ -17,3 +20,24 @@
     background-color:#FEFFDE;
 }
 
+.color-button-cancelar{
+    background-color: var(--danger-color);
+    border: var(--danger-color);
+    color: white;
+}
+
+.color-button-success{
+    background-color: var(--success-color);
+    border: var(--success-color);
+    color: white;
+}
+
+.color-button-info{
+    background-color: var(--info-color);
+    color: white;
+}
+
+.button-hover button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}

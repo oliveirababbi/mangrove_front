@@ -18,21 +18,9 @@ export class HomeComponent implements OnInit {
 
   produto: ProdutosModel = new ProdutosModel()
   listaProdutos: ProdutosModel[]
-  nomeProduto: string
-
-   usuario: UsuariosModel = new UsuariosModel()
-  idUsuario = environment.id
-   nome = environment.nomeUsuario
-
-  categoria: CategoriaModel = new CategoriaModel()
-  listaCategorias: CategoriaModel[]
-  idCategoria: number
-  nomeCategoria: string
   
   key = 'data'
   reverse = true
-
-  id = environment.id
 
   constructor(
     private router: Router,
@@ -47,21 +35,19 @@ export class HomeComponent implements OnInit {
     // alert("Sessão encerrada! Faça login novamente.")
     //    this.router.navigate(["/entrar"])
     // }
-    //  this.authService.refreshToken()
-    this.findAllCategorias()
+ 
+    window.scroll(0,0)
+    this.logado()
     this.findAllProdutos()
 }
 
-  findAllCategorias(){
-    this.categoriaService.getAllCategorias().subscribe((resp: CategoriaModel[])=>{
-      this.listaCategorias = resp
-    })
+logado() {
+  let ok: boolean = false;
+  if (environment.tokenUsuario != '') {
+    ok = true
+    this.authService.refreshToken()
   }
-
-  findByIdCategorias(){
-    this.categoriaService.getByIdCategorias(this.idCategoria).subscribe((resp: CategoriaModel)=>{
-      this.categoria = resp
-    }) 
+  return ok
 }
 
 findAllProdutos(){
@@ -70,32 +56,6 @@ findAllProdutos(){
   })
 }
 
-findByIdUsuario(){
-  this.authService.getByIdUser(this.idUsuario).subscribe((resp: UsuariosModel)=>{
-    this.usuario = resp
-  })
-}
-
-findByNomeProduto(){
-
-  if(this.nomeProduto ==''){
-    this.findAllProdutos()
-  } else{
-    this.produtoService.getByNomeProduto(this.nomeProduto).subscribe((resp: ProdutosModel[]) => {
-      this.listaProdutos = resp
-    })
-  }  
-}
-
-findByNomeCategoria(){
-  if(this.nomeCategoria ==''){
-    this.findAllCategorias()
-  } else{
-    this.categoriaService.getByNomeCategoria(this.nomeCategoria).subscribe((resp: CategoriaModel[]) =>{
-      this.listaCategorias=resp
-    })
-  }
-}
 
 administrador () {
   let ok: boolean = false;

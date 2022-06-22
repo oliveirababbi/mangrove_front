@@ -1,0 +1,23 @@
+.botao-cor-especial {
+    background-color: #E66C1F;
+    color: white;
+}
+
+.botao-cor-compra{
+    background-color: #ADAC33;
+    color: white;
+}
+
+.borda-cor-especial {
+    border-color: rgb(184, 182, 178);
+}
+
+.card-posicao-imagem {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+}
+.card-largura {
+    max-width: 18rem;
+    border-radius: 10px;
+}

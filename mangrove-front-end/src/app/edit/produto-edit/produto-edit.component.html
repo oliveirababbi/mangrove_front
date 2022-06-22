@@ -9,16 +9,16 @@
         
         <div class="col-md-5 margem-there">
             <div class= "form-group">
-                <label for="titulo">Nome do produto</label>
-                <input type="text" [(ngModel)]="produto.nomeProduto" class="form-control shadow" id="titulo" placeholder="Nome do Produto">
+                <label for="nomeProduto">Nome do produto</label>
+                <input type="text" [(ngModel)]="produto.nomeProduto" class="form-control shadow" id="nomeProduto" placeholder="Nome do Produto">
             </div>
             <div class="form-group">
-                <label for="texto">Descrição do produto</label>
-                <textarea type="text" [(ngModel)]="produto.descricaoProduto" class="form-control shadow"  name="texto" id="Descrição" placeholder="Digite o texto entre 5-1000 caracteres" rows="3"></textarea>
+                <label for="descricaoProduto">Descrição do produto</label>
+                <textarea type="text" [(ngModel)]="produto.descricaoProduto" class="form-control shadow"  name="descricaoProduto" id="descricaoProduto" placeholder="Digite o texto entre 5-1000 caracteres" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="titulo">Foto do produto</label>
-                <input type="text" [(ngModel)]="produto.fotoProduto" class="form-control shadow" id="titulo" placeholder="Foto do Produto">
+                <label for="fotoProduto">Foto do produto</label>
+                <input type="text" [(ngModel)]="produto.fotoProduto" class="form-control shadow" id="fotoProduto" placeholder="Foto do Produto">
             </div>
 
 
@@ -30,20 +30,28 @@
         
         <div>
         <div class="form-group">
-            <label for="titulo">Valor do produto</label>
-            <input type="text" [(ngModel)]="produto.valorProduto" class="form-control shadow" id="titulo" placeholder="Valor do Produto">
+            <label for="valorProduto">Valor do produto</label>
+            <input type="number" [(ngModel)]="produto.valorProduto" class="form-control shadow" id="valorProduto" placeholder="Valor do Produto">
         </div>
         <div class="form-group">
-            <label for="titulo">Estoque do produto</label>
-            <input type="text" [(ngModel)]="produto.estoqueProduto" class="form-control shadow" id="titulo" placeholder="Estoque do Produto">
+            <label for="estoqueProduto">Estoque do produto</label>
+            <input type="number" [(ngModel)]="produto.estoqueProduto" class="form-control shadow" id="estoqueProduto" placeholder="Estoque do Produto">
         </div>
         <div class="form-group">
-            <label for="texto">Escolha uma categoria ou <a href="#novaCategoria">adicione nova categoria</a></label>
+            <label for="categoriaProduto">Escolha uma categoria ou <a href="#novaCategoria">adicione nova categoria</a></label>
             <select class="form-control" name="categoria" id="categoria" [(ngModel)]="idCategoria" (change)="findByIdCategorias()">
                 <option *ngFor="let categoria of listCategorias" value="{{categoria.id}}">{{categoria.nomeCategoria}}</option>
             </select>
         </div>
-            <button class="botao-cor-especial botao-tamanho btn btn-success mt-2 rounded-pill" (click)="atualizar()">Atualizar</button>
+            <div class="row justify-content-center">
+                <div class="col-md-5 button-hover">
+                    <button class="color-button-cancelar botao-tamanho btn btn-success mt-2 rounded-pill" routerLink="/buscar-produtos">Cancelar</button>
+                </div>
+                <div class="col-md-5 button-hover">
+                    <button class="color-button-success botao-tamanho btn btn-success mt-2 rounded-pill" (click)="atualizar()">Atualizar</button>
+                </div>                
+            </div>          
+            
         </div>
         </div>
 
@@ -59,13 +67,13 @@
                 <h1 class="text-center">NOVA CATEGORIA</h1>
             </div>
       
-            <div class="col-md-12 d-flex justify-content-center"> 
+            <div class="col-md-12 d-flex justify-content-center mb-5"> 
                 <div class="form-group">
                     <label for="titulo">Nome</label>
                     <input type="text" [(ngModel)]="categoria.nomeCategoria" class="form-control shadow" id="titulo" placeholder="Nome">
-                    <button class="botao-cor-especial botao-tamanho btn btn-success mt-4 rounded-pill" (click)="cadastrarCategoria()">Cadastrar Categoria</button>
+                    <button class="color-button-success botao-tamanho-categoria btn btn-success mt-4 rounded-pill" (click)="cadastrarCategoria()">Cadastrar Categoria</button>
                     
                 </div>
                </div>
             </div>
-        </div>
+    </div>

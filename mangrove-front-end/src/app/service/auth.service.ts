@@ -20,6 +20,7 @@ export class AuthService {
       headers: new HttpHeaders().set('Authorization', environment.tokenUsuario)
     }
   }
+  
   constructor(
     private http: HttpClient
   ) { }

@@ -1,32 +1,27 @@
 <div class="container mb-5 mt-5">
     <div class="row">
-        <div class="col-md12">
-            <h1 class="text-center text-secondary">Deletar produto</h1>
+        <div class="col-md-12">
+            <h1 class="text-center text-dark">Deletar produto</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h4 class="text-center text-secondary">Você tem certeza que deseja deletar este produto?</h4>
+            <h4 class="text-center text-dark">Você tem certeza que deseja deletar <strong>{{produto.nomeProduto}}</strong>?</h4>
         </div>
     </div>
     <div class="row d-flex justify-content-center mt-5">
         <div class="col-md-4">
             <div class="card text-center">
                 <div class="card-body">
-                  <h5 class="card-title m-0">{{produto.nomeProduto}}</h5>
+                  <h5 class="card-title m-0">Nome: {{produto.nomeProduto}}</h5>
                   <small class="text-muted">Categoria: {{produto.categoria.nomeCategoria}} </small>
-                  <p class="card-text mt-3">{{produto.descricaoProduto}}</p>
-                     
-                  <a [routerLink]="['/edit-post', produto.id]" class="text-info mr-3" href="">Editar</a>
-                  <a [routerLink]="['/delete-post', produto.id]" class="text-danger" href="">Deletar</a>   
+                  <p class="card-text mt-3">Descrição: {{produto.descricaoProduto}}</p>
+                  <div class="button-hover"> 
+                  <button class="btn color-button-cancelar mr-4" routerLink="/buscar-produtos">Não</button>
+                  <button class="btn color-button-success btn-success" routerLink="/buscar-produtos" (click)="deletarProduto()">Sim</button>  
+                </div>  
                 </div>
               </div>
-        </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-danger mr-4" routerLink="/home">Não</button>
-            <button class="btn btn-success" (click)="deletarProduto()">Sim</button>
         </div>
     </div>
 </div>

@@ -42,7 +42,7 @@ export class ProdutoDeleteComponent implements OnInit {
     deletarProduto(){
       this.produtosService.deleteProdutos(this.idProduto).subscribe(()=>{
         this.alertas.showAlertSuccess('Produto removido com sucesso!')
-        this.router.navigate(['/home'])
+        this.router.navigate(['/buscar-produtos'])
       })
 }
 

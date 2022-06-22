@@ -15,9 +15,9 @@
     padding: 5px 15px 5px 15px;
 }
 .botao-cancelar{
-    background-color: #E66C1F;
+    background-color: var(--danger-color);
     color: white;
-    border-color:  #E66C1F;
+    border-color:  var(--danger-color);
     text-transform: uppercase; 
     border-radius: 50px ;
     padding: 5px 15px 5px 15px;
@@ -29,4 +29,8 @@
     border-color: #adabab;
     background-color:#FEFFDE; 
 }
- 
+
+.button-hover button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}

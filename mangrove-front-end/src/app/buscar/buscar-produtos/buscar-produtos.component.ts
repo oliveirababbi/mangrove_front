@@ -36,6 +36,7 @@ export class BuscarProdutosComponent implements OnInit {
     //   //alert("Sessão encerrada! Faça login novamente.")
     //   this.router.navigate(["/entrar"])
     // }
+    window.scroll(0,0)
     this.findAllProdutos()
   }
 

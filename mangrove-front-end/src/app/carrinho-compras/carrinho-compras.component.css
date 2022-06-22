@@ -12,7 +12,7 @@
     font-weight: 300;
   }
    
-  button[class*=btn] {
+  .btn-cart {
     width: 30px;
     height: 30px;
     background-color: #E1E8EE;
@@ -20,6 +20,7 @@
     border: none;
     cursor: pointer;
   }
+
   .minus-btn img {
     margin-bottom: 3px;
   }
@@ -44,3 +45,34 @@
   .buttonStyle{
     background-color: #45B264 !important;
   }
+
+  
+.fonte-titulo {
+  font-family: 'Roboto', sans-serif;
+}
+.botao-tamanho {
+ width: 200px;
+
+}
+
+.color-button-cancelar{
+  background-color: var(--danger-color);
+  border: var(--danger-color);
+  color: white;
+}
+
+.color-button-success{
+  background-color: var(--success-color);
+  border: var(--success-color);
+  color: white;
+}
+
+.color-button-info{
+  background-color: var(--info-color);
+  color: white;
+}
+
+.button-hover button:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}

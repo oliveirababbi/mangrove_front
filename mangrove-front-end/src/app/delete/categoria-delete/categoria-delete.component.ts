@@ -27,6 +27,7 @@ export class CategoriaDeleteComponent implements OnInit {
     if(environment.tokenUsuario ==''){
       this.router.navigate(['/categoria'])
     }
+    this.categoriasService.refreshToken()
     this.idCategoria= this.route.snapshot.params['id']
     this.findByIdCategoria(this.idCategoria)
   }

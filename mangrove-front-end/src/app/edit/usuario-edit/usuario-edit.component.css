@@ -8,11 +8,15 @@
     background-color:#FEFFDE;
 }
 .botao-cor-especial {
-    background-color: #E66C1F;
+    background-color: var(--success-color);
     color: white;
-    border-color:  #E66C1F;
+    border-color:  var(--success-color);
 }
 .botao-tamanho {
     width: 350px;
+}
 
+.button-hover button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }

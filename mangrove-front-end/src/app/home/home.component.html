@@ -1,18 +1,6 @@
-<!-- <div class="container">
-
-  <div class="row justify-content-center p-3" *ngIf="administrador()">
-    <div class="col-md-12">
-      <h2>Olá, {{nome}}</h2>
-      <div class="row">
-        <h4>Como podemos ajudar você?</h4>
-        <button routerLink="/produto">Cadastrar Produto</button>
-        <button [routerLink]="['/perfil', id]">Ver Perfil</button>
-      </div>      
-    </div>
-  </div>
-</div> -->
-
 <div class="container-fluid">
+  <div class="row justify-content-center mx-3">
+    <div class="col-md-12">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -35,6 +23,8 @@
       </button>
     </div>
   </div>
+  </div>
+</div>
     
     <div class="container mt-4">
       <div class="row justify-content-center">
@@ -68,13 +58,10 @@
                   <div class="d-flex flex-column">
                     <button
                       href="#"
-                      class="btn botao-cor-especial border-r px-4 py-0 m-0 mb-3"
-                    >
+                      class="btn color-button-success border-r px-4 py-0 m-0 mb-3">
                       Adicionar ao carrinho
                     </button>
-                    <button class="btn botao-cor-compra border-r px-4 py-0 mb-3">
-                      Comprar
-                    </button>
+                    <button class="btn color-button-info border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
                   </div>
                   <div *ngIf="administrador()">
                     <button class="btn btn-info mr-2"  [routerLink]="['/produto-edit', produto.id]">Editar</button>
@@ -103,12 +90,12 @@
                   <div class="d-flex flex-column">
                     <button
                       href="#"
-                      class="btn botao-cor-especial border-r px-4 py-0 m-0 mb-3"
+                      class="btn color-button-success border-r px-4 py-0 m-0 mb-3"
                     >
                       Adicionar ao carrinho
                     </button>
-                    <button class="btn botao-cor-compra border-r px-4 py-0 mb-3">
-                      Comprar
+                    <button class="btn color-button-info border-r px-4 py-0 mb-3">
+                      Ver mais
                     </button>
                   </div>
                   <div *ngIf="administrador()">
@@ -132,4 +119,3 @@
     </div>
   
     <!--/carrossel de produtos-->
-  

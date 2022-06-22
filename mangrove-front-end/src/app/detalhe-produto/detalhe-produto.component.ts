@@ -23,6 +23,7 @@ export class DetalheProdutoComponent implements OnInit {
   ) {}
 
   ngOnInit(){
+    window.scroll(0,0)
     this.produtoService.refreshToken();
     let id = this.route.snapshot.params['id'];
 

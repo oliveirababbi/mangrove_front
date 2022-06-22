@@ -17,7 +17,7 @@
 </div>
 </div>
 
-<div class="container-fluid">
+<div class="container">
   <section class="row justify-content-center fontRoboto">
      <article class="card borda-cor-especial card-largura p-0 m-4 col-12" *ngFor="let produto of categoria.produtos | orderBy : key : reverse">
      <div class="card text-center">
@@ -26,13 +26,13 @@
              <h5 class="card-title text-center">{{produto.nomeProduto}}</h5>
                  <p class="card-text text-center">R${{produto.valorProduto.replace(".", ",")}}</p>                  
            <div class="d-flex flex-column">
-             <button href="#" class="btn botao-cor-especial  border-r px-4 py-0 m-0 mb-3">Adicionar ao Carrinho</button>
-             <button class="btn botao-cor-compra border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
+             <button href="#" class="btn color-button-success border-r px-4 py-0 m-0 mb-3">Adicionar ao Carrinho</button>
+             <button class="btn color-button-info border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
            </div>
            <div *ngIf="administrador()">
             <hr>
-            <button class="btn btn-info mr-2"  [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
-            <button  class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
+            <button class="btn btn-info mr-2"  [routerLink]="['/produto-edit', produto.id]">Editar</button>
+            <button  class="btn btn-danger" [routerLink]="['/produto-delete', produto.id]">Apagar</button>
            </div>  
          </div>
      </div>            

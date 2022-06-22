@@ -1,19 +1,14 @@
 .border-r{
     border-radius: 50px 50px 50px 50px;
 }
-
-.botao-cor-especial {
-    background-color: #E66C1F;
+.color-button-success{
+    background-color: var(--success-color);
     color: white;
 }
 
-.botao-cor-compra{
-    background-color: #ADAC33;
+.color-button-info{
+    background-color: var(--info-color);
     color: white;
-}
-
-.borda-cor-especial {
-    border-color: rgb(184, 182, 178);
 }
 
 .card-posicao-imagem {

@@ -1,21 +1,23 @@
-<div class="container-fluid bgColor">
+<div class="container-fluid">
 
-    <div class="container bgColor">
+    <div class="container">
     
-        <div class="row flex-wrap pt-5 ml-5 mr-5">
+        <div class="row flex-wrap pt-5 mr-5 p-5">
             <div class="col-md-3 ml-5">
-                <img src="{{usuario.fotoUsuario}}" alt="" width="200px" height="200px"  class="img-fuid rounded-circle">
+                <img src="{{usuario.fotoUsuario}}" onerror="this.src = 'https://imgur.com/x0MpjPt.png'" alt="" width="200px" height="200px"  class="img-fuid rounded-circle">
             </div>
     
             <div class="col-md-8 mt-4 ml-3">
                 <ul class="list-unstyled">
-                    <li class="noWrap"><h6 class="font-weight-bold">Nome:</h6><p>{{usuario.nomeUsuario}}</p></li>
-                    <li class="noWrap"><h6 class="font-weight-bold">Tipo de usuário:</h6><p>{{usuario.tipoUsuario}}</p></li>
+                    <li class="noWrap"><h5> <b>Nome:</b>  {{usuario.nomeUsuario}}</h5></li>
+                    <li class="noWrap"><h5><b>Tipo de usuário:</b>  {{usuario.tipoUsuario}}</h5></li>
                 </ul>
             </div>
         </div>
        
-        <div class="container bgColor">
+        <hr>
+
+        <div class="container">
             <section class="row justify-content-center fontRoboto">
                 <article
                   class="card borda-cor-especial card-largura p-0 m-4 col-12"
@@ -26,7 +28,7 @@
                         src="{{ produto.fotoProduto }}"
                         onerror="this.src = 'https://portal.crea-sc.org.br/wp-content/uploads/2017/11/imagem-indisponivel-para-produtos-sem-imagem_15_5.jpg'"
                         class="card-posicao-imagem"
-                         alt="..."  width="300px" height="300px"
+                         alt="foto do produto"  width="300px" height="300px"
                       />
                       <h5 class="card-title text-center">{{ produto.nomeProduto }}</h5>
                       <p class="card-text text-center">R$ {{ produto.valorProduto }}</p>
@@ -38,10 +40,11 @@
                           Adicionar ao carrinho
                         </button>
                         <button class="btn botao-cor-compra border-r px-4 py-0 mb-3">
-                          Comprar
+                          Ver mais
                         </button>
                       </div>
-                      <div *ngIf="verificaoaUsuario()">
+                      <hr>
+                      <div *ngIf="verificaoUsuario()">
                         <button class="btn btn-info mr-2"  [routerLink]="['/produto-edit', produto.id]">Editar</button>
                         <button  class="btn btn-danger" [routerLink]="['/produto-delete', produto.id]">Apagar</button>
                        </div>

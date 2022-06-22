@@ -75,12 +75,21 @@
  .titulo-copyright{
      font-weight: bold;
      font-size: 1.5vw;
+     margin-bottom: 0px;
  }
 
  .subtitulo-copyright{
     font-size: 1.5vw;
+    margin-bottom: 1px;
  }
-
+.subtitulo-copyright a{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+.subtitulo-copyright a:hover{
+    color:black
+}
  @media screen and (max-width:850px) {
     .links-gerais a{
         font-size: 1.5vw;

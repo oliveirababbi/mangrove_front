@@ -6,12 +6,12 @@ a{
 }
 
 .navbar-custom{
-    background-color: #f3dcaf;
+    background-color: var(--secondary-color);
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 20px;
-    margin: 20px;
+    margin: 15px 20px 20px 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     z-index: 1;
@@ -33,7 +33,7 @@ a{
 }
 
 .dropdown-custom{
-    background-color: #f3dcaf;
+    background-color: var(--secondary-color);
     border: 0;
     font-family: 'Roboto', sans-serif;
     border-radius: 10px;
@@ -45,7 +45,7 @@ a{
 }
 
 .dropdown-item-custom:hover{
-    background-color: #f3dcaf;
+    background-color: var(--secondary-color);
     font-weight: 600;
     color:black;
 }
@@ -57,4 +57,30 @@ a{
 
 .fa:hover{
     color: black;
+}
+
+.navbar-custom-adm{
+    background-color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 5px 15px 0px 15px;
+    letter-spacing: 2px;
+    z-index: 1;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.font-adm{
+    color: aliceblue;
+    text-decoration: none;
+}
+.nav-adm{
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.nav-adm a:hover{
+    color: rgba(0,0,0,.5);
 }

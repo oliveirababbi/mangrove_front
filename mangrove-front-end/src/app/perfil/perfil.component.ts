@@ -18,7 +18,7 @@ export class PerfilComponent implements OnInit {
   usuario: UsuariosModel = new UsuariosModel()
   listaProdutos: ProdutosModel[]
 
-  idUsuario: 0
+  idUsuario:number
 
   constructor(
     private router: Router,
@@ -36,10 +36,8 @@ export class PerfilComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     let id = this.route.snapshot.params['id']
-    this.getProdutos()
     this.idUsuario= id
     this.findByIdUsuario()
-    this.getProdutos()
   }
 
   findByIdUsuario(){
@@ -54,9 +52,17 @@ export class PerfilComponent implements OnInit {
     })
   }
 
-  verificaoaUsuario(){
+  verificaoUsuario(){
     let ok: boolean = false;
     if (environment.id == this.idUsuario){
+      ok = true
+    }
+    return ok
+  }
+
+  logado() {
+    let ok: boolean = false;
+    if (environment.tokenUsuario != '') {
       ok = true
     }
     return ok

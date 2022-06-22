@@ -3,7 +3,7 @@
         <div class="col-md-6">
             <h2>Todas as categorias:</h2>  
         </div>   
-       
+    
         <div class="col-md-4">
             <div class="input-group">
                 <input type="text" class="form-control borderRad" aria-label="Text input with dropdown button" placeholder="filtrar por categoria" [(ngModel)]='nomeCategoria' (keyup)="findByNomeCategoria()">
@@ -30,7 +30,7 @@
                             </td>
                             <td class="d-flex justify-content-end">
                                 <button class="btn botao-editar mr-2 p-1"  [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
-                                <button  class="btn botao-apagar p-1" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
+                                <button  class="btn botao-apagar p-1 ml-2" [routerLink]="['/categoria-delete', categoria.id]">Apagar</button>
                             </td>
                           </tr>
                         </tbody>
@@ -44,7 +44,7 @@
                     <div class="form-group">
                         <input [(ngModel)]="categoria.nomeCategoria" type="text" name="nomeCategoria" class="form-control form-custom" id="nomeCategoria" placeholder="Digite o nome da categoria">
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center button-hover">
                         <button class="btn botao-cadastrar" (click)="cadastrarCategoria()">Cadastrar</button>
                     </div> 
                 </div>

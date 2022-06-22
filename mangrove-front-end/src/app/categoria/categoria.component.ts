@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CategoriaModel } from '../model/CategoriaModel';
+import { UsuariosModel } from '../model/UsuariosModel';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { CategoriasService } from '../service/categorias.service';
@@ -29,15 +30,12 @@ export class CategoriaComponent implements OnInit {
     }
 
   ngOnInit(){
-    window.scroll(0,0)
-    if(environment.tokenUsuario == ""){
-      //alert("Sessão encerrada! Faça login novamente.")
-      this.router.navigate(["/entrar"])    
-  }   
+    window.scroll(0,0)  
     if(environment.tipoUsuario != "adm"){
       alert("Você precisa ser Administrador para acessar essa rota")
       this.router.navigate(['/home'])
     }
+    this.categoriasService.refreshToken()
     this.findAllCategorias()
   
 }
@@ -64,15 +62,8 @@ cadastrarCategoria(){
     this.categoria=resp
     this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
     this.findAllCategorias()
-    this.categoria= new CategoriaModel()      
+    this.categoria= new CategoriaModel()     
   })
 }
 
-administrador () {
-  let ok: boolean = false;
-  if (environment.tipoUsuario == 'adm') {
-    ok = true
-  }
-  return ok
-}
 }

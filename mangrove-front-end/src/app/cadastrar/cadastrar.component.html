@@ -36,7 +36,7 @@
                             <select (change)="tipoDoUsuario($event)" class="form-control form-custom" name="tipUsuario" id="tipUsuario">
                                 <option value=""selected disabled> Selecione um tipo de usuário</option>
                                 <option value="normal">Cliente</option>
-                                <option value="adm" data-toggle="modal">Vendedor</option>
+                                <option value="adm" data-toggle="modal">Administrador</option>
                                 </select>
                         </div>
                         <div *ngIf="userAdm()">
