@@ -37,7 +37,7 @@ export class BuscarCategoriaComponent implements OnInit {
     //   this.router.navigate(["/entrar"])
     // }
 
-    
+   
     let id= this.route.snapshot.params['id']
     this.findByIdCategoria(id)
     this.findAllProdutos()
@@ -57,12 +57,15 @@ export class BuscarCategoriaComponent implements OnInit {
   findAllProdutos(){
     this.produtosService.getAllProdutos().subscribe((resp: ProdutosModel[])=>{
       this.listaProdutos = resp
+      let id= this.route.snapshot.params['id']
+    this.findByIdCategoria(id)
     })
   }
 
   findByIdCategoria(id: number){
     this.categoriasService.getByIdCategorias(id).subscribe((resp: CategoriaModel) =>{
       this.categoria= resp
+      this.findAllProdutos()
     })
   }
 

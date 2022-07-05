@@ -26,7 +26,7 @@
              <h5 class="card-title text-center">{{produto.nomeProduto}}</h5>
                  <p class="card-text text-center">R${{produto.valorProduto.replace(".", ",")}}</p>                  
            <div class="d-flex flex-column">
-             <button href="#" class="btn color-button-success border-r px-4 py-0 m-0 mb-3">Adicionar ao Carrinho</button>
+             <button href="#" class="btn color-button-success border-r px-4 py-0 m-0 mb-3" [routerLink]="['/carrinho-compras', produto.id]">Adicionar ao Carrinho</button>
              <button class="btn color-button-info border-r px-4 py-0 mb-3" [routerLink]="['/detalhe-produto', produto.id]">Ver mais</button>
            </div>
            <div *ngIf="administrador()">
